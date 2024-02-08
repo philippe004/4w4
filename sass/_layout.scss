@@ -6,28 +6,31 @@
 body{
   display: flex;
   flex-direction: column;
+  font-family: "prompt",sans-serif;
 }
 
 .global{
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    min-height: 40vh;
 }
 .global > section,
 .global > header,
 .global > footer{
-    flex : 0 1 1100px;
+    flex : 0 1 900px;
     border : 1px solid gray;
 }
 #entete{
     background-color: var(--couleur-arriere-entete);
 }
 #acceuil{
-    background-color: var(--couleur-arriere-accuiel);
+    background-color: var( --couleur-arriere-acceuil);
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
 }
 #galerie{
-    background-color: var(--couleur-arriere-galerie);
+    background-color: var( --couleur-arriere-galerie);
 }
 #footer{
     background-color: var(--couleur-arriere-footer);

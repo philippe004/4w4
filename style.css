@@ -1,23 +1,19 @@
-@charset "UTF-8";
 /*
 Theme Name: theme philippe
 Author: Louis Philippe Fils
 Author URI: https://wordpress.org/
 Description: theme de base devloper dans le cours 4w4
-Requires at least: 5.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-philippe
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 :root {
-  --couleur-arriére-entete: #aaa;
-  --couleur-arriére-acceuil: #0f0;
-  --couleur-arriére-evenement: #045;
-  --couleur-arriére-galerie: rgb(123, 22, 255);
-  --couleur-arriére-footer: rgb(240, 26, 108);
+  --couleur-arriere-entete: #aaa;
+  --couleur-arriere-acceuil: #0f0;
+  --couleur-arriere-evenement: #045;
+  --couleur-arriere-galerie: rgb(123, 22, 255);
+  --couleur-arriere-footer: rgb(240, 26, 108);
 }
 
 * {
@@ -28,19 +24,50 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   display: flex;
   flex-direction: column;
+  font-family: "prompt", sans-serif;
 }
 
 .global {
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 1100px;
+  flex: 0 1 900px;
   border: 1px solid gray;
 }
 
+#entete {
+  background-color: var(--couleur-arriere-entete);
+}
+
+#acceuil {
+  background-color: var(--couleur-arriere-acceuil);
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+}
+
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+}
+
 h1 {
+  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-weight: 600;
+  font-style: normal;
+}
+
+h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+  font-weight: 500;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
