@@ -1,7 +1,24 @@
 :root {
-    --couleur-arriere-entete: #aaa;
+    --couleur-arriere-entete: #e2dfdf;
     --couleur-arriere-acceuil: #0f0;
     --couleur-arriere-evenement : #045;
     --couleur-arriere-galerie: rgb(123, 22, 255);
     --couleur-arriere-footer : rgb(240, 26, 108);
+      // couleur h1
+      --couleur-h1: rgb(121, 121, 113);
+        // couleur h2
+    --couleur-h2:  rgba(73,33,133,);
+    // tranparence des h
+    --transparence-h1: .4;
+    // transparence section
+    --transparence-section: .3;
+    // couleur h3
+    --couleur-h3: rgba(255 0 198);
+    // couleur h4
+    --couleur-h4: rgb(12, 5, 214);
+    // couleur h5
+    --couleur-h5: rgb(255, 255, 0);
+      // couleur h6
+      --couleur-h6: rgb(26, 255, 0);
+
 }
