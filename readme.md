@@ -1,5 +1,5 @@
-# Labo01 #1
-## Introdustion a Sass et révision HTML/CSS
+# Labo01 #2
+## Utilisation des
 
 -un dossier Sass qui contient: 
  -un sous dossier base
