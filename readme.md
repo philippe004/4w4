@@ -1,23 +1,19 @@
-# Labo01 #2
-## Utilisation des
+# Labo #2
+## Utilisation de la fonction hsl()
+## Integration d'effet vague et diagonal
 
--un dossier Sass qui contient: 
- -un sous dossier base
-  -_h.scss
-  -_lien.scss
-  -style.scss
-  -création d'un pagination avec un flexbox
-  -utilisation de polices google-fonts
+### Références utiles
 
-  ## ce que vous devez faire:
-  
-  ### Ajouter des régles de style Saas pour
-  -chacun des éléments h
-  -Utiliser la propriété clamp
-  -changer les couleurs et la tranparence de
-   -background-color
-   -color
-   -Utiliser la fonction rgba()
-   -Créer de nouvelle variables:
-    -Lageur de la zone central .global>header, .global>footer, .global>section
+- référence hsl()
+ - https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
+ - https://css-tricks.com/creating-color-themes-with-custom-properties-hsl-and-a-little-calc/
+ - https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/
+
+
+## Ce que vous devez faire:
+
+### Utiser la fonction hsl
+### Intégrer les vagues
+### intégrer une diagonal
+
     
