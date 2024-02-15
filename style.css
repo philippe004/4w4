@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: theme philippe
 Author: Louis Philippe Fils
@@ -9,19 +10,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-philippe
 */
 :root {
-  --couleur-arriere-entete: #e2dfdf;
-  --couleur-arriere-acceuil: #0f0;
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: rgb(123, 22, 255);
-  --couleur-arriere-footer: rgb(240, 26, 108);
-  --couleur-h1: rgb(121, 121, 113);
-  --couleur-h2: rgba(73,33,133,);
-  --transparence-h1: .4;
-  --transparence-section: .3;
-  --couleur-h3: rgba(255 0 198);
-  --couleur-h4: rgb(12, 5, 214);
-  --couleur-h5: rgb(255, 255, 0);
-  --couleur-h6: rgb(26, 255, 0);
+  /*
+  --couleur-arriere-entete: #3ca5ff;
+  --couleur-arriere-accueil: #add70c;
+  --couleur-arriere-evenement: #32994f;
+  --couleur-arriere-galerie: rgb(230 139 42);
+  --couleur-arriere-footer: #6d5b48;
+  // Niveau de transparence des h
+  --transparence-h1 : .4;
+  // Transparence section
+  --transparence-section : .1;
+  */
+  /* Calcul des teintes) */
+  --u1: 186;
+  --u2: calc(var(--u1) + 36);
+  --u3: calc(var(--u2) - 15);
+  --u4: calc(var(--u2) + 15);
+  /* La saturation */
+  --s-arriere: 100%;
+  --s-avant: 50%;
+  /* la luminosité */
+  --l-arriere: 30%;
+  --l-avant: 20%;
+  /* couleur avant plan  - color  */
+  --couleur-entete: hsl(var(--u1), 100%, 50%);
+  --couleur-accueil:hsl(var(--u1), 19%, 69%);
+  --couleur-evenement:hsl(39, 92%, 57%);
+  --couleur-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant));
+  --couleur-footer: hsl(var(--u1),var(--s-avant), var(--l-avant));
+  --couleur-arriere-entete: hsl(var(--u1),100%,70%);
+  --couleur-arriere-accueil:hsl(var(--u1),100%,75%);
+  --couleur-arriere-footer: hsl(var(--u1),100%,70%);
+  --couleur-arriere-evenement: var(--couleur-arriere-accueil);
+  --couleur-arriere-galerie: var(--couleur-arriere-accueil);
 }
 
 * {
@@ -35,10 +56,6 @@ body {
   font-family: "prompt", sans-serif;
 }
 
-h6 {
-  font-family: "Protest Revolution", sans-serif;
-}
-
 .global {
   display: flex;
   justify-content: center;
@@ -49,65 +66,122 @@ h6 {
 .global > header,
 .global > footer {
   flex: 0 1 900px;
-  padding: 3rem 1rem;
-  background-color: rgba(255, 255, 255, var(--transparence-section));
 }
 
-#entete, #footer {
-  min-height: 20vh;
+#accueil section p {
+  margin: 20px;
+  background-color: var(--couleur-arriere-accueil);
+  box-shadow: 10px 16px 16px 14px var(--couleur-arriere-footer);
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  position: relative;
 }
 
-#acceuil {
-  background-color: var(--couleur-arriere-acceuil);
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+  position: relative;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  z-index: 1;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  position: relative;
 }
 
+/*
+https://chrisburnell.com/clamp-calculator/
+*/
 h1 {
   font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  letter-spacing: -3px;
   font-weight: 600;
   font-style: normal;
-  color: var(--couleur-h1);
+  padding: 5px;
+  text-shadow: 5px 5px 2px var(--couleur-footer);
+  color: var(--couleur-evenement);
+}
+
+#evenement h2 {
+  color: var(--couleur-evenement);
+}
+
+#entete h2 {
+  color: var(--couleur-entete);
 }
 
 h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  color: var(--couleur-h2);
+  padding: 5px;
+  color: var(--couleur-evenement);
+}
+
+#accueil h3 {
+  color: var(--couleur-evenement);
 }
 
 h3 {
-  font-size: clamp(1rem, -22.75rem + 4.75vw, 20rem);
-  color: var(--couleur-h3);
+  font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
 }
 
 h4 {
-  font-size: clamp(0.7rem, -2.175rem + 5.75vw, 3rem);
-  color: var(--couleur-h4);
+  color: var(--couleur-arriere-accueil);
 }
 
-h5 {
-  font-size: clamp(0.928rem, -1.484rem + 6.753vw, 2.857rem);
-  color: var(--couleur-h5);
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-h6 {
-  font-size: clamp(0.85rem, -3.712rem + 18.25vw, 4.5rem);
-  color: var(--couleur-h6);
-  font-family: "Prompt", sans-serif;
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 69px;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal ::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--couleur-entete);
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+a.button {
+  color: red;
+  margin: 3px;
+}
+
+.button {
+  padding: 2px;
+  border-radius: 5px;
+  color: var(--couleur-entete);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s;
 }/*# sourceMappingURL=style.css.map */
