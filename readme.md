@@ -1,4 +1,4 @@
-# Labo #2
+# Labo #3
 ## Utilisation de la fonction hsl()
 ## Integration d'effet vague et diagonal
 
