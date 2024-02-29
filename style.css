@@ -233,4 +233,9 @@ a.button {
   justify-content: space-around;
   flex: 1 0 20%;
   border: 1px solid red;
+}
+
+.carte p {
+  margin: 0;
+  color: magenta;
 }/*# sourceMappingURL=style.css.map */
