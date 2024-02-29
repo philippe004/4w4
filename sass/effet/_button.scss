@@ -1,5 +1,5 @@
 a.button{
-  color: red;
+  color: var(--couleur-evenement);
   margin: 3px;
   
   
@@ -13,6 +13,12 @@ a.button{
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  transition: background-color .3s;
+  transition: 0.3s ease-in-out;
 
+
+}
+.button:hover{
+  background-color: var(--couleur-entete);
+  color: var(--couleur-arriere-entete);
+  text-decoration: none;
 }

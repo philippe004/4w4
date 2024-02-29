@@ -10,17 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-philippe
 */
 :root {
-  /*
-  --couleur-arriere-entete: #3ca5ff;
-  --couleur-arriere-accueil: #add70c;
-  --couleur-arriere-evenement: #32994f;
-  --couleur-arriere-galerie: rgb(230 139 42);
-  --couleur-arriere-footer: #6d5b48;
-  // Niveau de transparence des h
-  --transparence-h1 : .4;
-  // Transparence section
-  --transparence-section : .1;
-  */
   /* Calcul des teintes) */
   --u1: 186;
   --u2: calc(var(--u1) + 36);
@@ -65,7 +54,11 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
+  flex: 0 1 1100px;
+}
+
+.global > header {
+  flex: 1;
 }
 
 #accueil section p {
@@ -77,6 +70,7 @@ body {
 #entete {
   background-color: var(--couleur-arriere-entete);
   position: relative;
+  min-height: 100vh;
 }
 
 #accueil {
@@ -99,6 +93,36 @@ body {
   position: relative;
 }
 
+#entete .icone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 1;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .global > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #entete .icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+.entete__header {
+  background-image: url("../images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -117,7 +141,7 @@ h1 {
 }
 
 #entete h2 {
-  color: var(--couleur-entete);
+  color: var(--couleur-evenement);
 }
 
 h2 {
@@ -138,6 +162,10 @@ h3 {
 
 h4 {
   color: var(--couleur-arriere-accueil);
+}
+
+span {
+  display: block;
 }
 
 .vague {
@@ -172,7 +200,7 @@ h4 {
 }
 
 a.button {
-  color: red;
+  color: var(--couleur-evenement);
   margin: 3px;
 }
 
@@ -183,5 +211,26 @@ a.button {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  transition: background-color 0.3s;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--couleur-entete);
+  color: var(--couleur-arriere-entete);
+  text-decoration: none;
+}
+
+.cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1 0 20%;
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */

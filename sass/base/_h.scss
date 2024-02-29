@@ -19,7 +19,7 @@ h1{
  }
 
 #entete h2 {
-    color: var(--couleur-entete);
+    color: var(--couleur-evenement);
    }
 
  h2{
@@ -39,4 +39,7 @@ h1{
  h5{}
  h6{
  
+ }
+ span{
+  display: block;
  }
