@@ -36,7 +36,11 @@ h1{
  h4{
    color: var(--couleur-arriere-accueil);
  }
- h5{}
+ h5{
+  font-size: clamp(0.75rem, -1.4375rem + 7vw, 1rem); 
+  color: magenta;
+}
+  
  h6{
  
  }

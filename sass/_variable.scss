@@ -1,8 +1,5 @@
 :root {
 
-
-
-
   /* Calcul des teintes) */
   --u1 : 186; // couleur initiale
   --u2 : calc(var(--u1) + 36); // couleur complémentaire
@@ -31,7 +28,9 @@
  --couleur-arriere-evenement: var(--couleur-arriere-accueil);
   --couleur-arriere-galerie: var(--couleur-arriere-accueil);
 
-
+}
+.carte{
+  --_couleur-arrier: hsl(var(--u1),100%,85%)
 }
 
 

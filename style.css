@@ -34,6 +34,10 @@ Text Domain: theme-philippe
   --couleur-arriere-galerie: var(--couleur-arriere-accueil);
 }
 
+.carte {
+  --_couleur-arrier: hsl(var(--u1),100%,85%) ;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,16 +52,21 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
   flex: 0 1 1100px;
+  padding: 3rem 1rem;
+  z-index: 1;
 }
 
-.global > header {
+#entete, #footer {
+  min-width: 20;
+}
+
+.global > .hero {
   flex: 1;
 }
 
@@ -117,7 +126,7 @@ body {
     height: 100vh;
   }
 }
-.entete__header {
+.hero {
   background-image: url("../images/wordpress-theme.png");
   background-repeat: no-repeat;
   background-position: 95% 50%;
@@ -162,6 +171,11 @@ h3 {
 
 h4 {
   color: var(--couleur-arriere-accueil);
+}
+
+h5 {
+  font-size: clamp(0.75rem, -1.4375rem + 7vw, 1rem);
+  color: magenta;
 }
 
 span {
@@ -230,12 +244,31 @@ a.button {
 .carte {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  flex: 1 0 20%;
+  justify-content: center;
+  flex: 1 0 225;
   border: 1px solid red;
+  background-color: var(--_couleur-arrier);
+  padding: 1rem;
 }
 
 .carte p {
   margin: 0;
   color: magenta;
+}
+
+.menu-principal-container {
+  background-color: black;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  flex: 1 0 50px;
+  list-style-type: none;
+}
+
+.menu-item a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

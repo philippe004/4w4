@@ -12,16 +12,23 @@ body{
 .global {
     display : flex;
     justify-content: center;
-    min-height : 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
     flex : 0 1 1100px;
-   
+    padding: 3rem 1rem;
+    z-index: 1;
 }
-.global > header{
+
+#memu{
+    
+}
+#entete , #footer{
+    min-width: 20;
+}
+.global > .hero{
     flex: 1;
    
 }

@@ -1,0 +1,15 @@
+.menu-principal-container{ //a
+background-color: black;
+
+}
+.menu{ // ul
+display: flex;
+
+}
+.menu-item{ //li
+   flex: 1 0 50px; 
+   list-style-type: none;
+}
+.menu-item a{ //li a
+    color: #fff;
+}
