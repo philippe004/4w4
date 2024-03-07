@@ -28,6 +28,9 @@ https://philippe004.github.io/4w4/
 - Résultat sous forme de github page (.5 point)
 - Design global de la page (.5 point)
 - lien de github-page
+- moddification du menu burger
+- moddification des vagues
+- 
 
 
 
