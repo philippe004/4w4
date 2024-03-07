@@ -3,12 +3,15 @@ background-color: rgb(69, 140, 221);
 
 }
 .menu{
+    z-index: 2;
     position: absolute;
+    top: 0;
     display: flex; 
     list-style-type: none;
     flex-direction: column;
     text-align: center;
-    // transform: translateX(300%);
+    background-color: rgb(69, 140, 221);
+    transform: translateX(300%);
     @media(min-width: 700px){
         position: static;
         flex-direction: row;
@@ -37,25 +40,25 @@ background-color: rgb(69, 140, 221);
 #burger{
     display: block;
     position: absolute;
-    top: 10px;
+    z-index: 1;
+    top: 0;
     right: 10px;
     @media(min-width: 700px){
         display: none;
     }
 
 }
-#chk_burger{
-    display: none;
+
+// &:checked ~ .menu{
+//    display: block;
    
-}
-&:checked ~ .menu{
-   display: block;
-}
+// }
 
 
 
-#chk_burger:checked ~ .menu-principal-container{
+#chk_burger:checked ~ .menu__header .menu{
     transform: translateX(0);
 
 }
+
 

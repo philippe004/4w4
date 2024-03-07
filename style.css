@@ -279,11 +279,15 @@ a.button {
 }
 
 .menu {
+  z-index: 2;
   position: absolute;
+  top: 0;
   display: flex;
   list-style-type: none;
   flex-direction: column;
   text-align: center;
+  background-color: rgb(69, 140, 221);
+  transform: translateX(300%);
 }
 @media (min-width: 700px) {
   .menu {
@@ -312,7 +316,8 @@ a.button {
 #burger {
   display: block;
   position: absolute;
-  top: 10px;
+  z-index: 1;
+  top: 0;
   right: 10px;
 }
 @media (min-width: 700px) {
@@ -321,6 +326,6 @@ a.button {
   }
 }
 
-#chk_burger:checked ~ .menu-principal-container {
+#chk_burger:checked ~ .menu__header .menu {
   transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
