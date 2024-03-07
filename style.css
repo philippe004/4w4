@@ -321,6 +321,6 @@ a.button {
   }
 }
 
-#chk_burger:checked ~ .menu {
+#chk_burger:checked ~ .menu-principal-container {
   transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
