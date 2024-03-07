@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thème philippe</title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="menu" class="gobal">
-        <header class="menu__header">
-          <?php wp_nav_menu(array("container" => "nav")); ?>
-        </header>
-    </div>
+
+    <?php  get_header(); ?>
     <div id="entete" class="global ">
         <section class="entete__hero">
             <h1>Thème philippe (h1)</h1>
@@ -28,33 +12,31 @@
                 <img width="120" height="120" src="https://img.icons8.com/plasticine/100/shark.png" alt="shark"/>
               </div>
         </section>
-
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill:var(--couleur-arriere-accueil);"></path>
-            </svg>
-        </div>
+   <!-- vague -->
+   <?php get_template_part('gabarits/vague'); ?>
+        
     </div>
     <div id="accueil" class="global">
         <section>
             <h2>Accueil (h2)</h2>
           <div class="cours">
             <?php 
-            if(have_posts()) :
-                while(have_posts()) : the_post();
-                $titre = get_the_title();
-                $sigle = substr($titre,0,7);
-                $pos_parenthese = strpos($titre, '(');
-                $duree = substr($titre,$pos_parenthese+1,-1);
-                $titre = substr($titre,7, $pos_parenthese-7);
+           if(have_posts()) :
+            while(have_posts()) : the_post();
+            $titre = get_the_title();
+            $sigle = substr($titre, 0, 7);
+            $duree = substr($titre, -6, 6);
+            $titreFin = trim(substr($titre, 7), $duree);
                 
                 
                 ?>
 
                 <div class="carte">
-                    <p><?php echo $sigle ?></p>
+                <p><?php echo $sigle ?></p>
                     <p><?php echo $titreFin ?></p>
                     <p><?php echo $duree ?></p>
+
+
                     <h5>Durée: <?php echo $duree; ?></h5>
 
 
@@ -82,11 +64,7 @@
             <h5>Lorem ipsum dvoluptatum amet ratione necessitatibus consectetur quisquam.</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga ab repellendus aliquam facere repudiandae omnis numquam illo eos ipsam. Qui provident cupiditate, animi veniam eaque voluptas reiciendis repellendus dicta!</p>
         </section>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill:var(--couleur-arriere-footer);"></path>
-            </svg>
-        </div>
+        <?php get_template_part('gabarits/vague'); ?>
     </div>
     <div id="footer" class="global">
         <footer>

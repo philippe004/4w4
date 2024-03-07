@@ -15,6 +15,15 @@
     height: 69px;
 }
 
-// .vague .shape-fill {
-//     fill:var(--couleur-arriere-accueil);
-// }
+.vague .remplissage{
+    fill:var(--_couleur-arriere-vague);
+}
+
+#entete{
+    --_couleur-arriere-vague: var( --couleur-arriere-accueil);
+}
+
+
+#galerie{
+    --_couleur-arriere-vague:var(--couleur-arriere-footer); ;
+}

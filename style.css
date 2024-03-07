@@ -27,6 +27,7 @@ Text Domain: theme-philippe
   --couleur-evenement:hsl(39, 92%, 57%);
   --couleur-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant));
   --couleur-footer: hsl(var(--u1),var(--s-avant), var(--l-avant));
+  --couleur-arriere-menu: hsl(var(--u1),100%,30%);
   --couleur-arriere-entete: hsl(var(--u1),100%,70%);
   --couleur-arriere-accueil:hsl(var(--u1),100%,75%);
   --couleur-arriere-footer: hsl(var(--u1),100%,70%);
@@ -62,6 +63,11 @@ body {
   z-index: 1;
 }
 
+#memu__entete {
+  background-color: var(--couleur-arriere-menu);
+  position: relative;
+}
+
 #entete, #footer {
   min-width: 20;
 }
@@ -89,6 +95,7 @@ body {
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  position: relative;
   z-index: 1;
 }
 
@@ -112,7 +119,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .global > header {
     display: flex;
     flex-direction: column;
@@ -123,7 +130,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
 }
 .hero {
@@ -199,6 +205,18 @@ span {
   height: 69px;
 }
 
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
+}
+
+#entete {
+  --_couleur-arriere-vague: var( --couleur-arriere-accueil);
+}
+
+#galerie {
+  --_couleur-arriere-vague:var(--couleur-arriere-footer);
+}
+
 .diagonal {
   position: relative;
   isolation: isolate;
@@ -257,18 +275,52 @@ a.button {
 }
 
 .menu-principal-container {
-  background-color: black;
+  background-color: rgb(69, 140, 221);
 }
 
 .menu {
+  position: absolute;
   display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    transform: translateX(0);
+    transition: 3.5s;
+  }
 }
 
 .menu-item {
   flex: 1 0 50px;
   list-style-type: none;
+  text-align: center;
 }
 
 .menu-item a {
-  color: #fff;
+  color: rgb(241, 245, 0);
+}
+
+.menu-item a:hover {
+  color: rgb(255, 255, 255);
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */

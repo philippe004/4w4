@@ -1,15 +1,51 @@
 .menu-principal-container{ //a
-background-color: black;
+background-color: rgb(69, 140, 221);
 
 }
-.menu{ // ul
-display: flex;
-
+.menu{
+    position: absolute;
+    display: flex; 
+    list-style-type: none;
+    flex-direction: column;
+    text-align: center;
+    // transform: translateX(300%);
+    @media(min-width: 700px){
+        position: static;
+        flex-direction: row;
+         display: flex;
+        transform: translateX(0);
+        transition: 3.5s;
+        
+    }
+    
 }
 .menu-item{ //li
    flex: 1 0 50px; 
    list-style-type: none;
+    text-align: center;
+    
 }
 .menu-item a{ //li a
-    color: #fff;
+    color: rgb(241, 245, 0);
+    
 }
+.menu-item a:hover{ //li a:hover
+    color: rgb(255, 255, 255);
+//    transition: ;
+}
+// gestion du label #burger l'image svg est dans le label
+#burger{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    @media(min-width: 700px){
+        display: none;
+    }
+
+}
+#chk_burger:checked ~ .menu{
+    transform: translateX(0);
+
+}
+
