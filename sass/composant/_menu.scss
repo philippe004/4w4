@@ -54,7 +54,9 @@ background-color: rgb(69, 140, 221);
 //    display: block;
    
 // }
-
+#chk_burger{
+    display: none;
+}
 
 
 #chk_burger:checked ~ .menu__header .menu{
